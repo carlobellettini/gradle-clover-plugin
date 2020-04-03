@@ -49,7 +49,7 @@ class CloverDependencyProjectActionUTest extends CloverBaseUTCase {
                 mavenLocal()
             }
             dependencies {
-                compile "org.openclover:clover:4.2.0-SNAPSHOT"
+                compile "org.openclover:clover:4.4.1-SNAPSHOT"
             }
         }
 
@@ -62,7 +62,7 @@ class CloverDependencyProjectActionUTest extends CloverBaseUTCase {
         }
 
         assert cloverDep != null
-        assert cloverDep.version == "4.2.0-SNAPSHOT"
+        assert cloverDep.version == "4.4.1-SNAPSHOT"
     }
 
     @Test
@@ -76,7 +76,7 @@ class CloverDependencyProjectActionUTest extends CloverBaseUTCase {
                 mavenLocal()
             }
             dependencies {
-                cloverCompile "org.openclover:clover:4.2.0-SNAPSHOT"
+                cloverCompile "org.openclover:clover:4.4.1-SNAPSHOT"
             }
         }
 
@@ -89,7 +89,7 @@ class CloverDependencyProjectActionUTest extends CloverBaseUTCase {
         }
 
         assert cloverDep != null
-        assert cloverDep.version == "4.2.0-SNAPSHOT"
+        assert cloverDep.version == "4.4.1-SNAPSHOT"
     }
 
     @Test
