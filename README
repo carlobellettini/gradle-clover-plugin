@@ -1,3 +1,7 @@
+
+This fork is used mainly as a demostration plugin at the course of "Verifica e convalida del Software" University of Milan - Italy.
+
+```
 (c) OpenClover 2017-2020
 (c) Atlassian 2002-2017
 
@@ -18,3 +22,4 @@ See also:
   https://github.com/openclover/grails-clover-plugin
   https://github.com/openclover/clover-maven-plugin
   https://github.com/openclover/clover-examples
+```

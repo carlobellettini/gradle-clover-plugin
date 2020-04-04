@@ -1,3 +1,8 @@
+plugins {
+    id 'java-gradle-plugin'
+    id "com.gradle.plugin-publish" version '0.11.0'
+}
+
 apply plugin: 'groovy'
 apply plugin: 'idea'
 apply plugin: 'maven-publish'
@@ -98,3 +103,26 @@ task publishRelease() {
     description = "Publish release artifacts to repository"
     dependsOn test //, should deped on publish release task
 }
+
+gradlePlugin {
+    plugins {
+        CloverCoverage {
+            id = 'com.github.carlobellettini.basic-clover-plugin'
+            implementationClass = 'com.atlassian.gradle.plugin.clover.CloverPlugin'
+        }
+    }
+}
+pluginBundle {
+    website = 'https://github.com/carlobellettini/gradle-clover-plugin'
+    vcsUrl = 'https://github.com/carlobellettini/gradle-clover-plugin'
+    description = 'Very basic Clover plugin for JUnit5'
+    tags = ['coverage-testing', 'clover', 'java']
+
+    plugins {
+        CloverCoverage {
+            id = 'com.github.carlobellettini.basic-clover-plugin'
+            displayName = 'Basic Clover Coverage plugin'
+        }
+    }
+}
+
